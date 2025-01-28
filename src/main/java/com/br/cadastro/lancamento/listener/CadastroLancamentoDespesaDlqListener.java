@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class CadastroLancamentoDlqListener {
+public class CadastroLancamentoDespesaDlqListener {
 
     @KafkaListener(topics = "${lancamento.topic.dlq.name}", groupId = "ms-cadastro-lancamento")
     public void listenDLQ(ConsumerRecord<String, String> message) {

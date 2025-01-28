@@ -17,7 +17,7 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class CadastroLancamentoMessagePublisher {
+public class CadastroLancamentoDespesaMessagePublisher {
     private final KafkaTemplate<String, String> kafkaTemplate;
 
     @Value("${lancamento.topic.name}")

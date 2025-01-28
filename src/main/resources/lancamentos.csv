@@ -1,6 +1,6 @@
-descricao,valor,tipo,observacao,idCategoria,idPessoa
-Cadastro Despesa 01,18000,DESPESA,Compra de drone,1,1
-Cadastro Despesa 02,28000,DESPESA,Compra de utensilios mensais,1,1
-Cadastro Despesa 03,8000,DESPESA,Gasto de almoço com parceiro,1,1
-Cadastro Despesa 04,100,DESPESA,Conserto van de transporte,1,1
-Cadastro Despesa 05,,DESPESA,Compra de notebooks,1,1
+descricao,valor,tipo,observacao,idCategoria,responsavel
+Cadastro Despesa 01,18000,DESPESA,Compra de drone,1,Ricardo
+Cadastro Despesa 02,28000,DESPESA,Compra de utensilios mensais,1,Ricardo
+Cadastro Despesa 03,8000,DESPESA,Gasto de almoço com parceiro,1,Ricardo
+Cadastro Despesa 04,100,DESPESA,Conserto van de transporte,1,Ricardo
+Cadastro Despesa 05,,DESPESA,Compra de notebooks,1,Ricardo

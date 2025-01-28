@@ -8,9 +8,9 @@ spring:
   application:
     name: cadastro-lancamento
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/xe
-    username: system
-    password: admin
+    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    username: HR
+    password: hr
     driver-class-name: oracle.jdbc.OracleDriver
     hikari:
       minimum-idle: 2
@@ -30,9 +30,12 @@ spring:
         order_inserts: true
         order_updates: true
   liquibase:
-    #contexts: local
+    contexts: local
     change-log: classpath:db.changelog/master.xml
     enabled: true
+  mvc: #incompatibilidade versão spring fox (paliativo)
+    pathmatch:
+      matching-strategy: ant-path-matcher
 
 lancamento:
   topic:

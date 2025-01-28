@@ -17,5 +17,5 @@ public class LancamentoCsvDto {
     private TipoLancamento tipo;
     private String observacao;
     private Long idCategoria;
-    private Long idPessoa;
+    private String responsavel;
 }

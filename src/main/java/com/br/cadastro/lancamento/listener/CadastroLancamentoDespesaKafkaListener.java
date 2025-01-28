@@ -2,7 +2,7 @@ package com.br.cadastro.lancamento.listener;
 
 
 import com.br.cadastro.lancamento.http.domain.dto.LancamentoCsvDto;
-import com.br.cadastro.lancamento.usecase.CadastraLancamento;
+import com.br.cadastro.lancamento.usecase.CadastraLancamentoDespesa;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Component
 @AllArgsConstructor
 @Slf4j
-public class CadastroLancamentoKafkaListener {
-    private final CadastraLancamento cadastraLancamento;
+public class CadastroLancamentoDespesaKafkaListener {
+    private final CadastraLancamentoDespesa cadastraLancamentoDespesa;
 
     @KafkaHandler
     @RetryableTopic(
@@ -40,7 +40,7 @@ public class CadastroLancamentoKafkaListener {
             if (lancamentoCsvDto.getValor() == null)
                 throw new RuntimeException("Lancamento invalido: " + lancamentoCsvDto.getDescricao());
 
-            cadastraLancamento.executar(lancamentoCsvDto);
+            cadastraLancamentoDespesa.executar(lancamentoCsvDto);
 
             log.info("Message processed: {} from {} offset {}", lancamentoCsvDto, topic, offset);
         } catch (Exception e) {

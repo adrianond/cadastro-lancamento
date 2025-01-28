@@ -2,7 +2,7 @@ package com.br.cadastro.lancamento.usecase;
 
 
 import com.br.cadastro.lancamento.http.domain.dto.LancamentoCsvDto;
-import com.br.cadastro.lancamento.publisher.CadastroLancamentoMessagePublisher;
+import com.br.cadastro.lancamento.publisher.CadastroLancamentoDespesaMessagePublisher;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.AllArgsConstructor;
@@ -18,12 +18,12 @@ import java.util.List;
 
 @Component
 @AllArgsConstructor
-public class PreparaDadosCadastroLancamento {
-    private final CadastroLancamentoMessagePublisher cadastroLancamentoMessagePublisher;
+public class PreparaDadosCadastroLancamentoDespesa {
+    private final CadastroLancamentoDespesaMessagePublisher cadastroLancamentoDespesaMessagePublisher;
 
     public ResponseEntity<String> executar()  {
         try {
-            cadastroLancamentoMessagePublisher.send(readDataFromCsv());
+            cadastroLancamentoDespesaMessagePublisher.send(readDataFromCsv());
             return ResponseEntity.ok("Message published successfully");
         } catch (Exception exception) {
             return ResponseEntity.
