@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521/XEPDB1
     username: HR
-    password: hr
+    password: teste
     driver-class-name: oracle.jdbc.OracleDriver
     hikari:
       minimum-idle: 2
@@ -36,6 +36,14 @@ spring:
   mvc: #incompatibilidade versão spring fox (paliativo)
     pathmatch:
       matching-strategy: ant-path-matcher
+
+app:
+  swagger.host: localhost:8080
+  proposta-credito:
+    scheduler:
+      efetuar-cadastro-despesa:
+        enabled: false
+        cron: !!str "0 0 9 * * *"  # todos os dias as 9:00:00 (segundo 0, minuto 0, 9 horas, dia do mes, mes, dia da semanma)
 
 lancamento:
   topic:

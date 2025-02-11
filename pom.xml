@@ -9,10 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.br</groupId>
-	<artifactId>cadastro-lancamentoDespesa</artifactId>
+	<artifactId>proposta-credito-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cadastro-lancamentoDespesa</name>
-	<description>Api para cadastro de lancacemto de despesas/receitas</description>
+	<name>proposta-credito-api</name>
 	<properties>
 		<java.version>11</java.version>
 		<liquibase-core.version>3.7.0</liquibase-core.version>
